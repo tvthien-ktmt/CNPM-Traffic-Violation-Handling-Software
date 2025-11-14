@@ -1,0 +1,49 @@
+/* ===== HOME PAGE ===== */
+.home-banner {
+  margin-top: 64px;
+  background: linear-gradient(135deg, #002b5b 0%, #1565c0 100%);
+  color: #fff;
+  text-align: center;
+  padding: 60px 0px;
+}
+
+.home-banner h1 {
+  font-size: 1.875rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.home-banner p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* Layout 2 cột */
+.home-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.main-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,84 @@
+/* ===== Notifications Sidebar ===== */
+.notifications-sidebar {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header */
+.sidebar-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.sidebar-header .icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Content */
+.sidebar-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Notification Item */
+.notification-item {
+  border-radius: 8px;
+  padding: 0.75rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+.notification-item .title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.notification-item .date {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Color Variants */
+.notification-item.yellow {
+  background-color: #fefce8;
+  border-color: #fef08a;
+}
+.notification-item.yellow:hover {
+  background-color: #fef9c3;
+}
+
+.notification-item.blue {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+}
+.notification-item.blue:hover {
+  background-color: #dbeafe;
+}
+
+.notification-item.green {
+  background-color: #ecfdf5;
+  border-color: #a7f3d0;
+}
+.notification-item.green:hover {
+  background-color: #d1fae5;
+}
