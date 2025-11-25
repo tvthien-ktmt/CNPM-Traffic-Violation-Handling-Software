@@ -19,12 +19,28 @@
       <!-- Logo và tên cơ quan -->
       <div class="header-left">
         <div class="logo-circle">
-          <svg class="logo-icon" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
-            />
-            <circle cx="12" cy="12" r="3" fill="currentColor" />
-          </svg>
+          <svg class="logo-icon" viewBox="0 0 24 24">
+  <!-- Hình tròn nền đỏ -->
+  <circle cx="12" cy="12" r="10" fill="#DA251D" />
+
+  <!-- Sao vàng 5 cánh căn giữa -->
+  <polygon
+    fill="#FFF200"
+    points="
+      12,6
+      13.76,10.65
+      18.76,10.65
+      14.5,13.6
+      16.2,18
+      12,15.2
+      7.8,18
+      9.5,13.6
+      5.24,10.65
+      10.24,10.65
+    "
+  />
+</svg>
+
         </div>
         <div class="logo-text">
           <h1 id="site-title">Cục Cảnh Sát Giao Thông</h1>
@@ -34,11 +50,11 @@
 
       <!-- Menu điều hướng -->
       <nav class="nav-menu">
-        <a href="/" class="menu-item">Trang chủ</a>
-        <a href="/tra-cuu" class="menu-item">Tra cứu vi phạm</a>
-        <a href="/officers/login" class="menu-item">Trang cán bộ</a>
-        <a href="/tin-tuc" class="menu-item">Tin tức</a>
-        <a href="/lien-he" class="menu-item">Liên hệ</a>
+        <a href="" class="menu-item">Trang chủ</a>
+        <a href="/traffic/app/views/violations/search.php" class="menu-item">Tra cứu phạt nguội </a>
+        <a href="#" class="menu-item">Truyền thống CSGT</a>
+        <a href="#" class="menu-item">Tin tức</a>
+        <a href="#" class="menu-item">Liên hệ</a>
       </nav>
 
       <!-- Nút đăng nhập + Menu mobile -->

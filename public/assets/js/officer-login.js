@@ -13,33 +13,33 @@ const defaultConfig = {
 
 // Hàm cập nhật giao diện
 async function onConfigChange(config) {
-  const systemTitle = config.system_title || defaultConfig.system_title;
-  document.getElementById("system-title").textContent = systemTitle;
+  document.getElementById("system-title").textContent =
+    config.system_title || defaultConfig.system_title;
 
-  const systemSubtitle =
+  document.getElementById("system-subtitle").textContent =
     config.system_subtitle || defaultConfig.system_subtitle;
-  document.getElementById("system-subtitle").textContent = systemSubtitle;
 
-  const formTitle = config.form_title || defaultConfig.form_title;
-  document.getElementById("form-title").textContent = formTitle;
+  document.getElementById("form-title").textContent =
+    config.form_title || defaultConfig.form_title;
 
-  const phoneLabel = config.phone_label || defaultConfig.phone_label;
-  document.getElementById("phone-label").textContent = phoneLabel;
+  document.getElementById("phone-label").textContent =
+    config.phone_label || defaultConfig.phone_label;
 
-  const passwordLabel = config.password_label || defaultConfig.password_label;
-  document.getElementById("password-label").textContent = passwordLabel;
+  document.getElementById("password-label").textContent =
+    config.password_label || defaultConfig.password_label;
 
-  const rememberLabel = config.remember_label || defaultConfig.remember_label;
-  document.getElementById("remember-label").textContent = rememberLabel;
+  document.getElementById("remember-label").textContent =
+    config.remember_label || defaultConfig.remember_label;
 
-  const loginButton = config.login_button || defaultConfig.login_button;
-  document.getElementById("login-button-text").textContent = loginButton;
+  document.getElementById("login-button-text").textContent =
+    config.login_button || defaultConfig.login_button;
 
-  const footerText = config.footer_text || defaultConfig.footer_text;
-  document.getElementById("footer-text").textContent = footerText;
+  document.getElementById("footer-text").textContent =
+    config.footer_text || defaultConfig.footer_text;
 
-  const homeLink = config.home_link || defaultConfig.home_link;
-  document.getElementById("home-link").textContent = homeLink;
+  // ❗ Không dùng innerHTML, tránh xóa href
+  document.getElementById("home-link").textContent =
+    config.home_link || defaultConfig.home_link;
 }
 
 // Khởi tạo SDK
@@ -47,7 +47,7 @@ if (window.elementSdk) {
   window.elementSdk.init({
     defaultConfig: defaultConfig,
     onConfigChange: onConfigChange,
-    mapToCapabilities: (config) => ({
+    mapToCapabilities: () => ({
       recolorables: [],
       borderables: [],
       fontEditable: undefined,
@@ -85,45 +85,40 @@ document.addEventListener("DOMContentLoaded", function () {
   const errorMessage = document.getElementById("error-message");
   const loginBtn = document.getElementById("login-btn");
 
-  // Xóa lỗi khi người dùng nhập lại
-  phoneInput.addEventListener("input", function () {
-    this.classList.remove("error");
+  // Xóa lỗi khi nhập
+  phoneInput.addEventListener("input", () => {
+    phoneInput.classList.remove("error");
     errorMessage.classList.remove("show");
   });
 
-  passwordInput.addEventListener("input", function () {
-    this.classList.remove("error");
+  passwordInput.addEventListener("input", () => {
+    passwordInput.classList.remove("error");
     errorMessage.classList.remove("show");
   });
 
-  // Xử lý submit form
+  // Xử lý form submit
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const phone = phoneInput.value.trim();
     const password = passwordInput.value.trim();
 
-    // Validate
-    if (!phone || !password) {
-      return;
-    }
+    if (!phone || !password) return;
 
-    // Hiển thị loading
     loginBtn.classList.add("loading");
     loginBtn.disabled = true;
 
     // Giả lập kiểm tra đăng nhập
     setTimeout(() => {
-      // Giả lập đăng nhập thất bại để demo
-      const isSuccess = false;
-
       loginBtn.classList.remove("loading");
       loginBtn.disabled = false;
+
+      const isSuccess = false;
 
       if (isSuccess) {
         showNotification(
           "success",
-          "Đăng nhập thành công!",
+          "Đăng nhập thành công",
           "Đang chuyển hướng..."
         );
       } else {
@@ -132,27 +127,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1500);
   });
 
-  // Xử lý link về trang chủ
-  document.getElementById("home-link").addEventListener("click", function (e) {
-    e.preventDefault();
+  // Validate chỉ nhập số
+  phoneInput.addEventListener("input", () => {
+    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
+  });
+
+  // ❗ Không ngăn redirect – chỉ hiển thị thông báo
+  document.getElementById("home-link").addEventListener("click", function () {
     showNotification("info", "Thông báo", "Đang chuyển về trang chủ...");
-  });
-
-  // Xử lý link quên mật khẩu
-  document.querySelector('a[href="#"]').addEventListener("click", function (e) {
-    if (this.textContent.includes("Quên mật khẩu")) {
-      e.preventDefault();
-      showNotification(
-        "warning",
-        "Khôi phục mật khẩu",
-        "Vui lòng liên hệ quản trị viên để được hỗ trợ."
-      );
-    }
-  });
-
-  // Validate số điện thoại khi nhập
-  phoneInput.addEventListener("input", function (e) {
-    this.value = this.value.replace(/[^0-9]/g, "");
   });
 });
 
@@ -185,14 +167,10 @@ function showNotification(type, title, message) {
             <p class="text-sm mt-1">${message}</p>
         </div>
     `;
+
   document.body.appendChild(notification);
 
-  setTimeout(
-    () => {
-      notification.remove();
-    },
-    type === "success" ? 3000 : 4000
-  );
+  setTimeout(() => notification.remove(), 3500);
 }
 
 // Hàm hiển thị lỗi đăng nhập
@@ -205,7 +183,5 @@ function showLoginError() {
   passwordInput.classList.add("error");
   errorMessage.classList.add("show");
 
-  setTimeout(() => {
-    errorMessage.classList.remove("show");
-  }, 5000);
+  setTimeout(() => errorMessage.classList.remove("show"), 5000);
 }

@@ -1,0 +1,134 @@
+Dự án: Phần mềm xử phạt vi phạm giao thông (Web)
+Công nghệ : 
++ AI: YOLOv8 
++ Dataset: ?????
++ Backend: PHP
++ Frontend: HTML CSS JS 
++ Cơ sở dữ liệu: SQL
+
++ Trang tin tức (trên phần header có nút để dẫn đến trang tra cứu vi phạm + Trang cán bộ)
+
++ Trang tra cứu vi phạm ---> nhập biển số xe để check, chatbot tra cứu tiền phạt của lỗi phạt,Thanh toán cho mã QRCode cho từng biển số xe khác nhau + số tiền với lỗi phạt, biên bản phạt cho người vi phạm + tra cứu lịch sử vi phạm + Xác minh thanh toán thành công (callback từ VNPay, Momo). và xuất ra biên lai để người vi phạm tải xuống xóa lỗi vi phạm đã được thanh toán  
++ Trang cán bộ ---> Trang đăng nhập (Số điện thoại + Mật khẩu()), + Check camera + xem biên lai vi phạm + chatbot tra cứu tiền phạt + lập biên bản thủ công và in ra biên bản + Xem bao nhiêu lỗi tới hiện tại + Nộp phạt thủ công thì cán bộ xóa lỗi  
+Bước 1: Camera nhận diện xe → detect biển số → OCR (machine đọc)
+Bước 2: Nếu OCR đọc sai / không đọc được → gắn tag FLAG = “Needs review”
+Bước 3: Người giám sát → xem ảnh/video → sửa biển số đúng
+Bước 4: Xác nhận vi phạm → tạo biên bản xử phạt
+
+Mô hình MVC
+
+Cấu trúc dự án:
+
+traffic-violation-system/
+│
+├── app/                                 # Phần chính của ứng dụng PHP (MVC)
+│   ├── controllers/
+│   │   ├── HomeController.php
+│   │   ├── ViolationController.php      # Tra cứu vi phạm, gửi câu hỏi cho AI
+│   │   ├── OfficerController.php
+│   │   ├── PaymentController.php
+│   │   ├── AuthController.php
+│   │   └── ApiController.php            # Gửi/nhận request đến API Python AI (Embedding)
+│   │
+│   ├── models/
+│   │   ├── Violation.php
+│   │   ├── Vehicle.php
+│   │   ├── Officer.php
+│   │   ├── Receipt.php
+│   │   ├── Payment.php
+│   │   └── Database.php
+│   │
+│   └── views/
+│       ├── layouts/
+│       │   ├── header.php
+│       │   └── footer.php
+│       │
+│       ├── home/
+│       │   └── index.php
+│       │
+│       ├── violations/
+│       │   ├── search.php               # Trang tra cứu vi phạm
+│       │   ├── chatbot_ui.php           # Chatbot hỏi mức phạt giao thông
+│       │   ├── payment.php
+│       │   ├── payment_success.php
+│       │   └── history.php
+│       │
+│       ├── officers/
+│       │   ├── login.php
+│       │   ├── dashboard.php
+│       │   ├── violations_list.php
+│       │   ├── add_violation.php
+│       │   └── receipt_list.php
+│       │
+│       └── chatbot/
+│           └── chatbot_ui.php
+│
+├── ai_service/                          # Phần AI riêng chạy Python (Embedding + YOLO)
+│   ├── embeddings/                      # Xử lý dữ liệu luật giao thông
+│   │   ├── data/
+│   │   │   ├── traffic_laws.json        # Danh sách lỗi + mức phạt + điều luật
+│   │   │   ├── traffic_laws_2025.json   # Bản cập nhật luật mới
+│   │   │   └── readme.md
+│   │   ├── create_embeddings.py         # Tạo vector embedding cho luật
+│   │   ├── query_laws.py                # Truy vấn mức phạt bằng ngữ nghĩa
+│   │   ├── app.py                       # Flask API phục vụ PHP
+│   │   ├── requirements.txt             # Thư viện cần cho Python (OpenAI, LangChain, ChromaDB)
+│   │   └── vector_db/                   # CSDL vector lưu embedding
+│   │       ├── chroma.sqlite3
+│   │       └── index/
+│   │
+│   ├── yolo/                            # Nhận diện biển số (YOLOv8)
+│   │   ├── detect_plate.py
+│   │   ├── extract_text.py
+│   │   ├── dataset/
+│   │   │   ├── train/
+│   │   │   ├── valid/
+│   │   │   └── labels/
+│   │   └── runs/                        # Lưu kết quả training YOLO
+│   │
+│   └── utils/
+│       ├── text_cleaner.py              # Làm sạch dữ liệu luật
+│       ├── pdf_reader.py                # Đọc dữ liệu từ file PDF Nghị định
+│       └── update_checker.py            # Tự động kiểm tra cập nhật luật mới
+│
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   │   └── chatbot.css
+│   │   ├── js/
+│   │   │   ├── main.js
+│   │   │   ├── chatbot.js               # Gửi câu hỏi từ người dùng đến Flask API
+│   │   │   └── validation.js
+│   │   └── images/
+│   │       ├── logo.png
+│   │       └── bg.jpg
+│   └── index.php
+│
+├── config/
+│   ├── config.php
+│   ├── database.php
+│   ├── routes.php
+│   ├── ai_config.php                    # URL của Flask API cho Embedding
+│   └── payment_config.php
+│
+├── database/
+│   ├── migrations/
+│   ├── seeds/
+│   └── factories/
+│
+├── scripts/
+│   ├── payments/
+│   │   ├── vnpay_callback.php
+│   │   └── momo_callback.php
+│   ├── export_receipt.php
+│   └── delete_paid_violations.php
+│
+├── tests/
+│   ├── controllers/
+│   ├── models/
+│   └── integration/
+│
+├── .env                                # Biến môi trường (API key OpenAI, DB)
+├── README.md
+└── composer.json

@@ -8,8 +8,9 @@
     <!-- IMPORT CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/traffic/public/assets/css/components/officer-login.css">
+    <!-- <link rel="stylesheet" href="/traffic/public/assets/css/components/officer-login.css"> -->
 </head>
+
 <body class="h-full">
     <main class="login-container">
         <div class="login-form-container">
@@ -17,11 +18,15 @@
         </div>
         
         <footer class="login-footer">
-            <p id="footer-text" class="text-sm mb-2 text-white">© 2025 Bộ Công An Việt Nam - Cục Cảnh Sát Giao Thông</p>
-            <a href="/" id="home-link" class="footer-link text-sm">← Về trang chủ</a>
+            <p id="footer-text" class="text-sm mb-2 text-white">
+                © 2025 Bộ Công An Việt Nam - Cục Cảnh Sát Giao Thông
+            </p>
+
+            <!-- LINK TRANG CHỦ ĐÃ SỬA -->
+            <a href="/traffic/public/" id="home-link" class="footer-link text-sm">← Về trang chủ</a>
         </footer>
     </main>
-    
+
     <script src="/traffic/public/assets/js/officer-login.js"></script>
 </body>
 </html>
