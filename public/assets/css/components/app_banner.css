@@ -1,0 +1,45 @@
+/* ===== APP BANNER STYLE ===== */
+
+.app-banner {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.app-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.app-banner h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.app-banner p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #e0e7ff;
+}
+
+/* ===== Button ===== */
+.download-btn {
+  background-color: white;
+  color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #f3f4f6;
+}

@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "D:/xampp/htdocs/traffic/venv/Scripts/python.exe",
+  "python.analysis.extraPaths": [
+    "D:/xampp/htdocs/traffic/venv/Lib/site-packages"
+  ],
+  "python.analysis.indexing": true,
+  "python.analysis.autoImportCompletions": true
+}

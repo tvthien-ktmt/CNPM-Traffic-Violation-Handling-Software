@@ -1,0 +1,669 @@
+{
+  "title": "PHỤ LỤC CAMERA AI GHI NHẬN DỮ LIỆU VI PHẠM TẠI TẠI TUYẾN CAO TỐC NỘI BÀI - LÀO CAI VÀ NỘI ĐÔ HÀ NỘI (từ 12h ngày 13/11/2025 đến 12h ngày 14/11/2025)",
+  "violations": [
+    {
+      "stt": 1,
+      "thoi_gian": "13/11/2025 - 16:48:15",
+      "bien_so": "29AC38624",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 2,
+      "thoi_gian": "13/11/2025 - 16:29:13",
+      "bien_so": "  ",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 3,
+      "thoi_gian": "13/11/2025 - 16:13:36",
+      "bien_so": "29BL00761",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 4,
+      "thoi_gian": "13/11/2025 - 16:10:39",
+      "bien_so": "29S601699",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 5,
+      "thoi_gian": "13/11/2025 - 16:08:32",
+      "bien_so": "29D222052",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 6,
+      "thoi_gian": "13/11/2025 - 16:06:56",
+      "bien_so": "30M51653",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 7,
+      "thoi_gian": "13/11/2025 - 16:03:04",
+      "bien_so": "29X705374",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 8,
+      "thoi_gian": "13/11/2025 - 16:00:57",
+      "bien_so": "89B220844",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 9,
+      "thoi_gian": "13/11/2025 - 15:57:21",
+      "bien_so": "29L184708",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 10,
+      "thoi_gian": "13/11/2025 - 15:57:13",
+      "bien_so": "30X96638",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 11,
+      "thoi_gian": "13/11/2025 - 15:57:10",
+      "bien_so": "29S689087",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 12,
+      "thoi_gian": "13/11/2025 - 15:38:39",
+      "bien_so": "29B156380",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 13,
+      "thoi_gian": "13/11/2025 - 15:36:32",
+      "bien_so": "33P91189",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 14,
+      "thoi_gian": "13/11/2025 - 15:29:17",
+      "bien_so": "36K522284",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 15,
+      "thoi_gian": "13/11/2025 - 15:12:10",
+      "bien_so": "35E104457",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 16,
+      "thoi_gian": "13/11/2025 - 15:10:07",
+      "bien_so": "29L176931",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 17,
+      "thoi_gian": "13/11/2025 - 15:00:48",
+      "bien_so": "24B138438",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 18,
+      "thoi_gian": "13/11/2025 - 15:00:45",
+      "bien_so": "29X125277",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 19,
+      "thoi_gian": "13/11/2025 - 14:53:31",
+      "bien_so": "29T200230",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 20,
+      "thoi_gian": "13/11/2025 - 14:47:57",
+      "bien_so": "29AY06309",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 21,
+      "thoi_gian": "13/11/2025 - 14:41:51",
+      "bien_so": "33M16180",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 22,
+      "thoi_gian": "13/11/2025 - 14:32:25",
+      "bien_so": "29P120215",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 23,
+      "thoi_gian": "13/11/2025 - 14:30:43",
+      "bien_so": "88D112783",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 24,
+      "thoi_gian": "13/11/2025 - 14:21:10",
+      "bien_so": "28P186170",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 25,
+      "thoi_gian": "13/11/2025 - 14:19:28",
+      "bien_so": "29L560484",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 26,
+      "thoi_gian": "13/11/2025 - 14:17:45",
+      "bien_so": "18EA08113",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 27,
+      "thoi_gian": "13/11/2025 - 14:17:32",
+      "bien_so": "29L562047",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 28,
+      "thoi_gian": "13/11/2025 - 14:17:22",
+      "bien_so": "29V155595",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 29,
+      "thoi_gian": "13/11/2025 - 14:11:53",
+      "bien_so": "29E269222",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 30,
+      "thoi_gian": "13/11/2025 - 14:04:16",
+      "bien_so": "29X217837",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 31,
+      "thoi_gian": "13/11/2025 - 14:03:46",
+      "bien_so": "36B410942",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 32,
+      "thoi_gian": "13/11/2025 - 13:55:19",
+      "bien_so": "18F120587",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 33,
+      "thoi_gian": "13/11/2025 - 13:51:05",
+      "bien_so": "29E160418",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 34,
+      "thoi_gian": "13/11/2025 - 13:09:40",
+      "bien_so": "18E28067",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 35,
+      "thoi_gian": "13/11/2025 - 13:02:02",
+      "bien_so": "98L45912",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 36,
+      "thoi_gian": "13/11/2025 - 13:00:27",
+      "bien_so": "29BC07407",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 37,
+      "thoi_gian": "13/11/2025 - 12:58:31",
+      "bien_so": "17N26854",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 38,
+      "thoi_gian": "13/11/2025 - 12:52:38",
+      "bien_so": "29DN01390",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 39,
+      "thoi_gian": "13/11/2025 - 12:41:20",
+      "bien_so": "29E215545",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 40,
+      "thoi_gian": "13/11/2025 - 12:26:15",
+      "bien_so": "29U151129",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 41,
+      "thoi_gian": "13/11/2025 - 12:20:59",
+      "bien_so": "23B154743",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 42,
+      "thoi_gian": "13/11/2025 - 12:19:31",
+      "bien_so": "29E42850",
+      "mau_bien": "Vàng",
+      "doi_tuong": "Ô tô con",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 43,
+      "thoi_gian": "13/11/2025 - 12:19:28",
+      "bien_so": "29AE03431",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 44,
+      "thoi_gian": "13/11/2025 - 12:18:58",
+      "bien_so": "29Y76563",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 45,
+      "thoi_gian": "13/11/2025 - 12:16:51",
+      "bien_so": "29H183930",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 46,
+      "thoi_gian": "14/11/2025 - 11:50:55",
+      "bien_so": "29BC17353",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 47,
+      "thoi_gian": "14/11/2025 - 11:50:53",
+      "bien_so": "29K75672",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 48,
+      "thoi_gian": "14/11/2025 - 11:48:39",
+      "bien_so": "17AF03717",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 49,
+      "thoi_gian": "14/11/2025 - 11:34:01",
+      "bien_so": "29P184166",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 50,
+      "thoi_gian": "14/11/2025 - 11:14:58",
+      "bien_so": "20H163941",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 51,
+      "thoi_gian": "14/11/2025 - 07:23:02",
+      "bien_so": "29P164283",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 52,
+      "thoi_gian": "14/11/2025 - 06:59:02",
+      "bien_so": "29P128985",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 53,
+      "thoi_gian": "14/11/2025 - 06:55:24",
+      "bien_so": "29L176385",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 54,
+      "thoi_gian": "14/11/2025 - 06:55:18",
+      "bien_so": "29Y151990",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 55,
+      "thoi_gian": "14/11/2025 - 06:53:41",
+      "bien_so": "29P191557",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 56,
+      "thoi_gian": "14/11/2025 - 06:39:43",
+      "bien_so": "99AK04993",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Vượt đèn đỏ"
+    },
+    {
+      "stt": 57,
+      "thoi_gian": "14/11/2025 - 11:50:48",
+      "bien_so": "29K75672",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 58,
+      "thoi_gian": "14/11/2025 - 07:15:04",
+      "bien_so": "29E302358",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 59,
+      "thoi_gian": "14/11/2025 - 07:02:09",
+      "bien_so": "29BC04781",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 60,
+      "thoi_gian": "14/11/2025 - 06:58:59",
+      "bien_so": "29P128985",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 61,
+      "thoi_gian": "14/11/2025 - 06:43:17",
+      "bien_so": "29N155473",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 62,
+      "thoi_gian": "13/11/2025 - 16:46:33",
+      "bien_so": "29AD91913",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 63,
+      "thoi_gian": "13/11/2025 - 16:39:00",
+      "bien_so": "29BC03785",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 64,
+      "thoi_gian": "13/11/2025 - 16:30:50",
+      "bien_so": "29P128985",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 65,
+      "thoi_gian": "13/11/2025 - 16:07:09",
+      "bien_so": "18GA12251",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 66,
+      "thoi_gian": "13/11/2025 - 16:07:01",
+      "bien_so": "14X136595",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 67,
+      "thoi_gian": "13/11/2025 - 16:03:02",
+      "bien_so": "29X705374",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 68,
+      "thoi_gian": "13/11/2025 - 16:00:49",
+      "bien_so": "90B258751",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 69,
+      "thoi_gian": "13/11/2025 - 15:36:09",
+      "bien_so": "29X139538",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 70,
+      "thoi_gian": "13/11/2025 - 15:26:58",
+      "bien_so": "29L19999",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 71,
+      "thoi_gian": "13/11/2025 - 14:48:57",
+      "bien_so": "29X207424",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 72,
+      "thoi_gian": "13/11/2025 - 14:29:19",
+      "bien_so": "17B759862",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 73,
+      "thoi_gian": "13/11/2025 - 12:26:01",
+      "bien_so": "29AC96120",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Xe mô tô",
+      "loai_canh_bao": "Không đội mũ"
+    },
+    {
+      "stt": 74,
+      "thoi_gian": "13/11/2025 - 18:17:22",
+      "bien_so": "14H03953",
+      "mau_bien": "Vàng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 75,
+      "thoi_gian": "13/11/2025 - 02:28:33",
+      "bien_so": "15H01476",
+      "mau_bien": "Vàng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 76,
+      "thoi_gian": "13/11/2025 - 20:12:29",
+      "bien_so": "17L0342",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 77,
+      "thoi_gian": "13/11/2025 - 18:38:01",
+      "bien_so": "29C89971",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 78,
+      "thoi_gian": "13/11/2025 - 03:49:01",
+      "bien_so": "30M32987",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 79,
+      "thoi_gian": "13/11/2025 - 21:22:57",
+      "bien_so": "50H62558",
+      "mau_bien": "Vàng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 80,
+      "thoi_gian": "13/11/2025 - 17:52:05",
+      "bien_so": "89H04965",
+      "mau_bien": "Vàng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 81,
+      "thoi_gian": "13/11/2025 - 18:02:48",
+      "bien_so": "98H06645",
+      "mau_bien": "Vàng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 82,
+      "thoi_gian": "14/11/2025 - 05:24:58",
+      "bien_so": "17C17319",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Không thắt dây đai an toàn"
+    },
+    {
+      "stt": 83,
+      "thoi_gian": "14/11/2025 - 01:52:07",
+      "bien_so": "89C34292",
+      "mau_bien": "Trắng",
+      "doi_tuong": "Ô tô tải từ 3,5 tấn",
+      "loai_canh_bao": "Sử dụng điện thoại khi lái xe"
+    }
+  ]
+}

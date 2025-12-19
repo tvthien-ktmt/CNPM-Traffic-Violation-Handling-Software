@@ -1,0 +1,23 @@
+
+# Allow access to assets directory
+Order Allow,Deny
+Allow from all
+
+# Set proper cache headers
+<FilesMatch "\.(jpg|jpeg|png|gif|webm|mp4)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# Enable CORS for media files
+<FilesMatch "\.(webm|mp4|jpg|jpeg|png|gif)$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+    Header set Access-Control-Allow-Headers "Range"
+</FilesMatch>
+
+# Handle byte-range requests for videos
+<IfModule mod_headers.c>
+    <FilesMatch "\.(webm|mp4)$">
+        Header set Accept-Ranges bytes
+    </FilesMatch>
+</IfModule>

@@ -1,0 +1,7 @@
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install sentence-transformers
+pip install regex
+pip install numpy
+pip install pandas
+pip install requests
+pip install tqdm

@@ -1,0 +1,202 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Traffic Violation Payment System">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Actors/Systems -->
+        <mxCell id="actor1" value="Người Vi Phạm" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="system1" value="Trang Web" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="system2" value="ChatBot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="system3" value="Hệ Thống Xử Phạt" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="system4" value="Cổng Thanh Toán" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="system5" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="900" y="40" width="80" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Lifelines -->
+        <mxCell id="lifeline1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="60" y="140" width="10" height="900" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="lifeline2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="235" y="140" width="10" height="900" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="lifeline3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="415" y="140" width="10" height="900" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="lifeline4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="595" y="140" width="10" height="900" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="lifeline5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="775" y="140" width="10" height="900" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="lifeline6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="935" y="140" width="10" height="900" as="geometry"/>
+        </mxCell>
+        
+        <!-- Messages -->
+        <mxCell id="msg1" value="1. Truy cập trang tra cứu" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="160" as="sourcePoint"/>
+            <mxPoint x="235" y="160" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg2" value="2. Hiển thị form tra cứu" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235" y="190" as="sourcePoint"/>
+            <mxPoint x="70" y="190" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg3" value="3. Nhập biển số xe" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="220" as="sourcePoint"/>
+            <mxPoint x="235" y="220" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg4" value="4. Gửi yêu cầu tra cứu" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="250" as="sourcePoint"/>
+            <mxPoint x="415" y="250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg5" value="5. Truy vấn vi phạm" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="280" as="sourcePoint"/>
+            <mxPoint x="935" y="280" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg6" value="6. Trả danh sách vi phạm" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="935" y="310" as="sourcePoint"/>
+            <mxPoint x="425" y="310" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg7" value="7. Hiển thị kết quả tra cứu" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="415" y="340" as="sourcePoint"/>
+            <mxPoint x="245" y="340" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg8" value="8. Hỏi thông tin lỗi phạt" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="380" as="sourcePoint"/>
+            <mxPoint x="415" y="380" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg9" value="9. Xử lý câu hỏi" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="410" as="sourcePoint"/>
+            <mxPoint x="595" y="410" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg10" value="10. Trả thông tin lỗi" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="595" y="440" as="sourcePoint"/>
+            <mxPoint x="425" y="440" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg11" value="11. Hiển thị câu trả lời" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="415" y="470" as="sourcePoint"/>
+            <mxPoint x="70" y="470" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg12" value="12. Chọn thanh toán vi phạm" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="510" as="sourcePoint"/>
+            <mxPoint x="235" y="510" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg13" value="13. Tạo yêu cầu thanh toán" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="540" as="sourcePoint"/>
+            <mxPoint x="595" y="540" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg14" value="14. Tạo QR code thanh toán" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="570" as="sourcePoint"/>
+            <mxPoint x="775" y="570" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg15" value="15. Hiển thị QR code" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="595" y="600" as="sourcePoint"/>
+            <mxPoint x="245" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg16" value="16. Quét QR để thanh toán" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="640" as="sourcePoint"/>
+            <mxPoint x="775" y="640" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg17" value="17. Xác nhận thanh toán thành công" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775" y="670" as="sourcePoint"/>
+            <mxPoint x="605" y="670" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg18" value="18. Cập nhật trạng thái đã thanh toán" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="700" as="sourcePoint"/>
+            <mxPoint x="935" y="700" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg19" value="19. Hiển thị thông báo thành công" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="595" y="730" as="sourcePoint"/>
+            <mxPoint x="245" y="730" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg20" value="20. Tải biên lai thanh toán" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235" y="760" as="sourcePoint"/>
+            <mxPoint x="70" y="760" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

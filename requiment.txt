@@ -1,0 +1,381 @@
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install sentence-transformers
+pip install regex
+pip install numpy
+pip install pandas
+pip install requests
+pip install tqdm
+
+Dự án: Phần mềm xử phạt vi phạm giao thông (Web)
+Công nghệ : 
++ AI: YOLOv8 
++ Dataset: ?????
++ Backend: PHP
++ Frontend: HTML CSS JS 
++ Cơ sở dữ liệu: SQL
+
+Dự án: Phần mềm xử phạt vi phạm giao thông (Web)
+
++ Trang chủ chứa tin tức (trên phần header có nút để dẫn đến trang tra cứu vi phạm + Trang cán bộ)
+
++ Trang tra cứu vi phạm ---> nhập biển số xe để check, chatbot tra cứu tiền phạt của lỗi phạt,Thanh toán cho mã QRCode cho từng biển số xe khác nhau + số tiền với lỗi phạt, biên bản phạt cho người vi phạm + tra cứu lịch sử vi phạm + Xác minh thanh toán thành công (callback từ VNPay, Momo). và xuất ra biên lai để người vi phạm tải xuống xóa lỗi vi phạm đã được thanh toán  
++ Trang cán bộ ---> Trang đăng nhập (Số điện thoại + Mật khẩu()), + Check camera + xem biên lai vi phạm + chatbot tra cứu tiền phạt + lập biên bản thủ công và in ra biên bản + Xem bao nhiêu lỗi tới hiện tại + Nộp phạt thủ công thì cán bộ xóa lỗi  
+
+Phần AI: ĐỌC biển số xe vi phạm 
+Bước 1: Camera nhận diện xe → detect biển số → OCR (machine đọc)
+Bước 2: Nếu OCR đọc sai / không đọc được → gắn tag FLAG = “Needs review”
+Bước 3: Người giám sát → xem ảnh/video → sửa biển số đúng
+Bước 4: Xác nhận vi phạm → tạo biên bản xử phạt
+
+Mô hình MVC
+
+
+
+I. Mô tả hệ thống qua usecase diagram:
+
+
+1. Các chức năng chính
+Tra cứu vi phạm: Tìm kiếm thông tin vi phạm theo biển số, mã vụ việc, hoặc thông tin chủ xe.
+
+Thanh toán phạt trực tuyến: Hỗ trợ quét QR để thanh toán hoặc thanh toán trực tiếp trên hệ thống.
+
+Xác minh thanh toán: Kiểm tra trạng thái thanh toán, xác nhận sau khi giao dịch hoàn tất.
+
+Xem lịch sử vi phạm: Hiển thị danh sách các vi phạm đã có, đã xử lý hoặc chưa xử lý.
+
+Chatbot tra cứu: Tương tác tự động để hỗ trợ tra cứu thông tin vi phạm.
+
+2. Các vai trò người dùng và chức năng tương ứng
+Người vi phạm
+
+Quét QR thanh toán
+
+Thanh toán phạt
+
+Xem lịch sử vi phạm
+
+Xác minh thanh toán
+
+Bảng nhập (có thể là nhân viên xử lý hồ sơ hoặc cán bộ đầu vào)
+Lập biên bản vi phạm
+
+Xem biên lai thanh toán
+
+Nộp phạt thủ công (nhập liệu thanh toán offline)
+
+Xem thống kê vi phạm
+
+Sửa biển số (trong trường hợp nhập sai)
+
+Cán bộ giao thông
+Kiểm tra thủ công (xác minh vi phạm trực tiếp)
+
+Xem ảnh/video vi phạm
+
+Sửa biển số (nếu có sai sót trong ghi nhận)
+
+Lập biên bản
+
+Xem thống kê
+
+Hệ thống AI
+Nhận diện biển số tự động
+
+OCR đọc biển số từ ảnh/video
+
+Hỗ trợ xử lý và phân loại vi phạm
+
+3. Luồng xử lý điển hình
+Phát hiện vi phạm: Hệ thống AI nhận diện biển số từ camera hoặc ảnh chụp.
+
+Lập biên bản: Cán bộ hoặc hệ thống tự động tạo biên bản vi phạm.
+
+Tra cứu & thông báo: Người vi phạm tra cứu qua chatbot hoặc trang web.
+
+Thanh toán: Người vi phạm thanh toán qua QR hoặc nộp phạt trực tiếp.
+
+Xác minh & lưu trữ: Hệ thống xác minh thanh toán và cập nhật trạng thái.
+
+4. Đặc điểm nổi bật
+Tích hợp AI để tự động hóa nhận diện biển số và phân loại vi phạm.
+
+Hỗ trợ nhiều kênh thanh toán, đặc biệt là QR code.
+
+Giao diện chatbot thân thiện, hỗ trợ tra cứu nhanh.
+
+Phân quyền rõ ràng giữa người vi phạm, cán bộ và nhân viên xử lý.
+
+Báo cáo & thống kê hỗ trợ công tác quản lý và giám sát.
+
+II. Mô tả hệ thống qua Class-diagram
+
+
+---
+
+Biểu đồ lớp hệ thống xử phạt giao thông
+
+1. Các lớp chính và thuộc tính
+
+| Lớp | Thuộc tính | Phương thức |
+|------|------------|-------------|
+| **NguoiDung** (Lớp cha) | `id`, `hoTen`, `email`, `soDienThoai`, `matKhau` | `dangNhap()` |
+| **CanBo** (Kế thừa NguoiDung) | `maCanBo`, `capBac`, `donVi` | `lapBienBan()`, `xoaLoiViPham()` |
+| **NguoiViPham** (Kế thừa NguoiDung) | `cccd`, `diaChi` | `traCuuViPham()`, `thanhToan()` |
+| **PhuongTien** | `bienSo`, `loaiXe` | `getThongTin()` |
+| **LoiViPham** | `maLoi`, `tenLoi`, `mucPhat`, `moTa` | `tinhTienPhat()` |
+| **BienBanViPham** | `maBienBan`, `thoiGian`, `diaDiem`, `trangThai` | `taoBienBan()`, `capNhatTrangThai()`, `inBienBan()` |
+| **HoaDonThanhToan** | `maHoaDon`, `soTien`, `phuongThuc`, `thoiGian`, `trangThai` | `taoHoaDon()`, `xacNhanThanhToan()` |
+| **Camera** | `viTri` | `nhanDienBienSo()` |
+| **AI_OCR** | `model`, `doChinhXac` | `detectBienSo()`, `nhanDangKyTu()`, `kiemTraLoi()` |
+| **ChatBot** | - | `traCuuLoi()`, `tinhTienPhat()` |
+
+---
+
+2. Mối quan hệ giữa các lớp
+
+1. Kế thừa:
+   - `CanBo` và `NguoiViPham` kế thừa từ `NguoiDung`.
+2. **Liên kết trực tiếp**:
+   - `CanBo` tạo `BienBanViPham`.
+   - `BienBanViPham` liên kết với `LoiViPham` và `PhuongTien`.
+   - `NguoiViPham` thanh toán tạo `HoaDonThanhToan`.
+3. **Hỗ trợ AI**:
+   - `Camera` và `AI_OCR` hỗ trợ nhận diện biển số và xử lý vi phạm.
+4. **ChatBot**:
+   - Cung cấp chức năng tra cứu lỗi và tính tiền phạt, có thể tương tác với `LoiViPham`.
+
+---
+
+3. Mô tả ngắn gọn từng lớp
+
+- **NguoiDung**: Lớp cơ sở chứa thông tin chung của người dùng hệ thống.
+- **CanBo**: Cán bộ giao thông, có quyền lập biên bản và xóa lỗi vi phạm.
+- **NguoiViPham**: Người bị xử phạt, có thể tra cứu vi phạm và thanh toán.
+- **PhuongTien**: Lưu thông tin phương tiện vi phạm.
+- **LoiViPham**: Mô tả các lỗi vi phạm và mức phạt tương ứng.
+- **BienBanViPham**: Biên bản vi phạm, ghi nhận thời gian, địa điểm, trạng thái.
+- **HoaDonThanhToan**: Hóa đơn thanh toán phạt, lưu phương thức và thời gian thanh toán.
+- **Camera & AI_OCR**: Hệ thống hỗ trợ tự động nhận diện biển số và xử lý ảnh/video.
+- **ChatBot**: Trợ lý ảo hỗ trợ tra cứu và tính phạt.
+
+---
+
+4. Gợi ý cải thiện biểu đồ lớp
+
+- Thêm quan hệ **aggregation/composition** giữa `BienBanViPham` và `LoiViPham`.
+- Bổ sung lớp **ThongKe** nếu cần xuất báo cáo.
+- Thêm lớp **QRCode** nếu cần quản lý mã thanh toán riêng.
+- Liên kết `ChatBot` với `LoiViPham` và `HoaDonThanhToan` để hỗ trợ tra cứu và thanh toán.
+
+
+III. Biểu đồ tuần tự 
+
+- Các đối tượng tham gia:
++ Người vi phạm (Actor)
+
++ Hệ thống tra cứu (Giao diện người dùng)
+
++ Cơ sở dữ liệu vi phạm
+
++ ChatBot hỗ trợ
+
++ Hệ thống thanh toán
+
++ Hệ thống cập nhật trạng thái
+
+- Luồng thực hiện chi tiết:
+* Bước 1–7: Tra cứu vi phạm
+Người vi phạm truy cập trang tra cứu.
+
+Hệ thống hiển thị form tra cứu.
+
+Người vi phạm nhập biển số xe.
+
+Gửi yêu cầu tra cứu đến hệ thống.
+
+Hệ thống truy vấn cơ sở dữ liệu vi phạm.
+
+Cơ sở dữ liệu trả về danh sách vi phạm.
+
+Hệ thống hiển thị kết quả tra cứu.
+
+* Bước 8–11: Tương tác với ChatBot (hỗ trợ thông tin)
+Người dùng hỏi thông tin chi tiết về lỗi phạt (qua ChatBot).
+
+ChatBot xử lý câu hỏi.
+
+ChatBot trả về thông tin lỗi.
+
+Hệ thống hiển thị câu trả lời từ ChatBot.
+
+* Bước 12–19: Thanh toán vi phạm
+Người vi phạm chọn thanh toán vi phạm.
+
+Hệ thống tạo yêu cầu thanh toán.
+
+Hệ thống tạo mã QR thanh toán.
+
+Hiển thị QR code cho người dùng.
+
+Người dùng quét QR để thanh toán (qua ứng dụng ngân hàng/Ví điện tử).
+
+Hệ thống thanh toán xác nhận thanh toán thành công.
+
+Hệ thống cập nhật trạng thái vi phạm thành "đã thanh toán".
+
+Hiển thị thông báo thành công.
+
+* Bước 20: Hoàn tất
+Hệ thống tải biên lai thanh toán (xuất PDF).
+
+Mô tả ngắn gọn luồng xử lý:
+Tra cứu → Hiển thị vi phạm.
+
+Hỏi đáp ChatBot → Lấy thông tin chi tiết.
+
+Thanh toán QR → Xác nhận và cập nhật trạng thái.
+
+Xuất biên lai → Kết thúc quy trình.
+
+
+Cấu trúc thư mục dự án:
+
+traffic/
+├── app/
+│   ├── controllers/
+│   │   ├── ApiController.php
+│   │   ├── AuthController.php
+│   │   ├── ChatbotController.php
+│   │   ├── HomeController.php
+│   │   ├── OfficerController.php
+│   │   ├── PaymentController.php
+│   │   └── ViolationController.php
+│   │
+│   ├── models/
+│   │   ├── Database.php
+│   │   ├── Officer.php
+│   │   ├── Payment.php
+│   │   ├── Receipt.php
+│   │   ├── Vehicle.php
+│   │   └── Violation.php
+│   │
+│   ├── services/
+│   │   └── PhatNguoiScraper.php
+│   │
+│   └── views/
+│       ├── chatbot/
+│       │   └── chatbot_ui.php
+│       │
+│       ├── components/
+│       │   ├── app_banner.php
+│       │   ├── news_list.php
+│       │   ├── notifications_sidebar.php
+│       │   ├── officer-login-card.php
+│       │   ├── quick_links.php
+│       │   └── search_form.php
+│       │
+│       ├── home/
+│       │   └── index.php
+│       │
+│       ├── layouts/
+│       │   ├── footer.php
+│       │   └── header.php
+│       │
+│       ├── officers/
+│       │   ├── add_violation.php
+│       │   ├── dashboard.php
+│       │   ├── login.php
+│       │   ├── receipt_list.php
+│       │   └── violations_list.php
+│       │
+│       ├── payment_page/
+│       │
+│       └── violations/
+│           ├── chatbot_ui.php
+│           ├── data_xuphat/
+│           │   ├── data_13-14_11_2025.json
+│           │   ├── data_19-20_11_2025.json
+│           │   ├── data_19_11_2025.json
+│           │   └── data_27-28_11_2025.json
+│           ├── history.php
+│           ├── payment.php
+│           ├── payment_success.php
+│           ├── search.php
+│           ├── violations_footer.php
+│           └── violations_header.php
+│
+│
+├── config/
+│   ├── ai_config.php
+│   ├── config.php
+│   ├── database.php
+│   ├── payment_config.php
+│   └── routes.php
+│
+│
+├── database/
+│   ├── factories/
+│   │
+│   ├── migrations/
+│   │   └── create_violations_table.sql
+│   │
+│   └── seeds/
+│
+│
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── components/
+│   │   │   │   ├── app_banner.css
+│   │   │   │   ├── footer.css
+│   │   │   │   ├── header.css
+│   │   │   │   ├── home.css
+│   │   │   │   ├── login_page/
+│   │   │   │   │   ├── officer-login-card.css
+│   │   │   │   │   └── officer-login.css
+│   │   │   │   ├── news_list.css
+│   │   │   │   ├── notifications_sidebar.css
+│   │   │   │   ├── quick_links.css
+│   │   │   │   ├── search_form.css
+│   │   │   │   └── violation_page/
+│   │   │   │       ├── violation_footer.css
+│   │   │   │       ├── violation_search.css
+│   │   │   │       └── violations_header.css
+│   │   │   ├── layout.css
+│   │   │   └── style.css
+│   │   │
+│   │   ├── images/
+│   │   │
+│   │   └── js/
+│   │       ├── chatbot.js
+│   │       ├── header.js
+│   │       ├── main.js
+│   │       ├── officer-login.js
+│   │       ├── search_violation.js
+│   │       ├── violation_search.js
+│   │       └── violations.js
+│   │
+│   └── index.php
+│
+│
+├── scripts/
+│   ├── delete_paid_violations.php
+│   ├── export_receipt.php
+│   └── pay/
+│       ├── momo_callback.php
+│       └── vnpay_callback.php
+│
+│
+├── tests/
+│   ├── controllers/
+│   ├── integration/
+│   └── models/
+│
+│
+└── README.md  (gợi ý thêm)
+
+
+
+Trang cán bô: 2 cái 
+- Xác nhận văn bản từ cam: 1 trang gồm video của đường giám sát (lỗi mà camera trên đường đó đã bắt được), bên dưới sẽ có nút xác nhận văn bản thì trong văn bản có sẵn ảnh xe vi phạm và ảnh toàn cảnh xe vi phạm, nếu may mắn bắt được biển số thì biên bản đó có sẵn biển số được ghi trong mục biển số xe vi phạm trong biên bản PDF, nếu biển số không xác định thì phải request cho cán bộ nhập biển sô bằng tay ---> nếu văn bản lỗi thì hủy văn bản đó đi xóa ra khỏi văn bản đã tạo của cán bộ
+- 

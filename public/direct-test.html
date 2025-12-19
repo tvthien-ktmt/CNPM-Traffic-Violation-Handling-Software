@@ -1,0 +1,197 @@
+[file name]: D:\xampp\htdocs\traffic\public\direct-test.html [file content
+begin]
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Direct Test - CSGT System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .section {
+        margin: 30px 0;
+        padding: 20px;
+        background: #f5f5f5;
+        border-radius: 10px;
+      }
+      .success {
+        color: green;
+      }
+      .error {
+        color: red;
+      }
+      .test-btn {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 15px;
+        background: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .test-btn:hover {
+        background: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Direct Access Test</h1>
+
+    <div class="section">
+      <h2>Test 1: Access Static Files</h2>
+
+      <h3>Videos:</h3>
+      <p>
+        <a
+          class="test-btn"
+          href="/traffic/public/assets/videos/nguyen-tat-thanh.webm"
+          target="_blank"
+        >
+          Test nguyen-tat-thanh.webm
+        </a>
+        <a
+          class="test-btn"
+          href="/traffic/public/assets/videos/dien-bien-phu.webm"
+          target="_blank"
+        >
+          Test dien-bien-phu.webm
+        </a>
+      </p>
+
+      <h3>Images:</h3>
+      <p>
+        <a
+          class="test-btn"
+          href="/traffic/public/assets/images/violation_1.jpg"
+          target="_blank"
+        >
+          Test violation_1.jpg
+        </a>
+        <a
+          class="test-btn"
+          href="/traffic/public/assets/images/violation_2.jpg"
+          target="_blank"
+        >
+          Test violation_2.jpg
+        </a>
+        <a
+          class="test-btn"
+          href="/traffic/public/assets/images/violation_3.jpg"
+          target="_blank"
+        >
+          Test violation_3.jpg
+        </a>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Test 2: Access Application Pages</h2>
+
+      <h3>Login:</h3>
+      <p>
+        <a
+          class="test-btn"
+          href="/traffic/app/views/officers/login.php"
+          target="_blank"
+        >
+          Officer Login
+        </a>
+      </p>
+
+      <h3>Camera Controller:</h3>
+      <p>
+        <a
+          class="test-btn"
+          href="/traffic/app/controllers/CameraController.php?action=index"
+          target="_blank"
+        >
+          Camera List
+        </a>
+        <a
+          class="test-btn"
+          href="/traffic/app/controllers/CameraController.php?action=view&id=1"
+          target="_blank"
+        >
+          Camera 1 (Nguyễn Tất Thành)
+        </a>
+        <a
+          class="test-btn"
+          href="/traffic/app/controllers/CameraController.php?action=view&id=2"
+          target="_blank"
+        >
+          Camera 2 (Điện Biên Phủ)
+        </a>
+      </p>
+
+      <h3>Officer Controller:</h3>
+      <p>
+        <a
+          class="test-btn"
+          href="/traffic/app/controllers/OfficerController.php?action=dashboard"
+          target="_blank"
+        >
+          Officer Dashboard
+        </a>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Test 3: Quick Video Player Test</h2>
+
+      <h3>Nguyễn Tất Thành Camera:</h3>
+      <video width="800" controls>
+        <source
+          src="/traffic/public/assets/videos/nguyen-tat-thanh.webm"
+          type="video/webm"
+        />
+        Your browser does not support WebM video.
+      </video>
+
+      <h3>Điện Biên Phủ Camera:</h3>
+      <video width="800" controls>
+        <source
+          src="/traffic/public/assets/videos/dien-bien-phu.webm"
+          type="video/webm"
+        />
+        Your browser does not support WebM video.
+      </video>
+    </div>
+
+    <script>
+      // Kiểm tra file tồn tại
+      async function checkFile(url) {
+        try {
+          const response = await fetch(url, { method: "HEAD" });
+          return response.ok;
+        } catch (error) {
+          return false;
+        }
+      }
+
+      // Auto-check files
+      document.addEventListener("DOMContentLoaded", async function () {
+        const files = [
+          "/traffic/public/assets/videos/nguyen-tat-thanh.webm",
+          "/traffic/public/assets/videos/dien-bien-phu.webm",
+          "/traffic/public/assets/images/violation_1.jpg",
+          "/traffic/public/assets/images/violation_2.jpg",
+          "/traffic/public/assets/images/violation_3.jpg",
+        ];
+
+        for (const file of files) {
+          const exists = await checkFile(file);
+          const status = exists ? "✅" : "❌";
+          console.log(`${status} ${file}`);
+
+          // Update link appearance
+          const links = document.querySelectorAll(`a[href="${file}"]`);
+          links.forEach((link) => {
+            link.style.background = exists ? "#4CAF50" : "#f44336";
+            link.innerHTML = `${status} ${link.innerHTML}`;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

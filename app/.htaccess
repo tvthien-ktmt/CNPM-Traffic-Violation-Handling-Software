@@ -1,0 +1,11 @@
+# Deny access to all files in app directory
+
+Order Deny,Allow
+Deny from all
+
+# Allow access to specific files if needed
+
+<FilesMatch "\.(php)$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>

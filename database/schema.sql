@@ -1,0 +1,23 @@
+CREATE DATABASE IF NOT EXISTS traffic_db
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE traffic_db;
+
+CREATE TABLE officers (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE violations (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    officer_id INT UNSIGNED,
+    plate_number VARCHAR(20) NOT NULL,
+    violation_type VARCHAR(255),
+    fine_amount INT,
+    created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT fk_officer
+        FOREIGN KEY (officer_id) REFERENCES officers(id)
+        ON DELETE SET NULL
+) ENGINE=InnoDB;

@@ -1,0 +1,167 @@
+/* ===== HEADER ===== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: #002b5b;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo và text */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  background-color: #b91c1c; /* đỏ */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  color: #facc15; /* vàng */
+}
+
+.logo-text h1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sub-title {
+  font-size: 0.9rem;
+  color: #9ecbff;
+  margin: 0;
+}
+
+/* Menu điều hướng */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.menu-item {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.menu-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Nút đăng nhập */
+.btn-login {
+  background-color: white;
+  color: #002b5b;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #e5e7eb;
+}
+
+/* Menu icon (mobile) */
+.btn-menu {
+  background: none;
+  border: none;
+  color: white;
+  display: none; /* ẩn mặc định, chỉ hiện khi mobile */
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* ẩn menu khi màn hình nhỏ */
+  }
+
+  .btn-menu {
+    display: block;
+  }
+
+  .header-left .logo-text h1 {
+    font-size: 1rem;
+  }
+}
+.btn-login {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-login:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.mobile-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}

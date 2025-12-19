@@ -1,0 +1,134 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="AI Traffic Violation Detection System">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Actors/Systems -->
+        <mxCell id="camera" value="Camera" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn-icons-png.flaticon.com/512/3687/3687412.png;imageBackground=default;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="60" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="ai_system" value="Hệ Thống AI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="supervisor" value="Người Giám Sát" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="470" y="40" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="penalty_system" value="Hệ Thống Xử Phạt" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="610" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Lifelines -->
+        <mxCell id="lifeline1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="105" y="140" width="10" height="600" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="lifeline2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="295" y="140" width="10" height="600" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="lifeline3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="480" y="140" width="10" height="600" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="lifeline4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="665" y="140" width="10" height="600" as="geometry"/>
+        </mxCell>
+        
+        <!-- Messages -->
+        <mxCell id="msg1" value="1. Chụp ảnh" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115" y="170" as="sourcePoint"/>
+            <mxPoint x="295" y="170" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg2" value="2. Detect biển số" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="305" y="210" as="sourcePoint"/>
+            <mxPoint x="665" y="210" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg3" value="3. OCR đọc ký tự" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="305" y="250" as="sourcePoint"/>
+            <mxPoint x="665" y="250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg4" value="4. Kết quả nhận diện" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="290" as="sourcePoint"/>
+            <mxPoint x="305" y="290" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg5" value="5. Gắn flag &quot;Needs review&quot; (nếu OCR sai)" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="305" y="340" as="sourcePoint"/>
+            <mxPoint x="665" y="340" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg6" value="6. Thông báo cần xem xét" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="380" as="sourcePoint"/>
+            <mxPoint x="490" y="380" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg7" value="7. Xem ảnh/video" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="420" as="sourcePoint"/>
+            <mxPoint x="490" y="420" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg8" value="8. Sửa biển số đúng" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="460" as="sourcePoint"/>
+            <mxPoint x="665" y="460" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg9" value="9. Xác nhận vi phạm" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="500" as="sourcePoint"/>
+            <mxPoint x="665" y="500" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg10" value="10. Tạo biên bản" style="html=1;verticalAlign=bottom;endArrow=block;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="540" as="sourcePoint"/>
+            <mxPoint x="675" y="580" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="730" y="540"/>
+              <mxPoint x="730" y="580"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Notes/Annotations -->
+        <mxCell id="note1" value="AI tự động phát hiện&#xa;và nhận diện biển số" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;size=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="note2" value="Human-in-the-loop:&#xa;Giám sát viên kiểm tra&#xa;các trường hợp không chắc chắn" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;size=10;" vertex="1" parent="1">
+          <mxGeometry x="520" y="390" width="140" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Quy Trình Xử Lý Vi Phạm Giao Thông Có AI Hỗ Trợ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="0" width="400" height="30" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

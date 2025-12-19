@@ -1,0 +1,111 @@
+.quick-links {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header */
+.quick-links-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.quick-links-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.quick-links-header .icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Body */
+.quick-links-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Individual Quick Link */
+.quick-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  color: #111827;
+}
+
+/* Icon box */
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  transition: background-color 0.2s ease;
+}
+
+/* ===== Color Variants ===== */
+
+/* Blue */
+.quick-link.blue {
+  background-color: #eff6ff;
+}
+.quick-link.blue:hover {
+  background-color: #dbeafe;
+}
+.icon-box.blue {
+  background-color: #dbeafe;
+}
+.quick-link.blue:hover .icon-box.blue {
+  background-color: #bfdbfe;
+}
+
+/* Green */
+.quick-link.green {
+  background-color: #ecfdf5;
+}
+.quick-link.green:hover {
+  background-color: #d1fae5;
+}
+.icon-box.green {
+  background-color: #d1fae5;
+}
+.quick-link.green:hover .icon-box.green {
+  background-color: #a7f3d0;
+}
+
+/* Yellow */
+.quick-link.yellow {
+  background-color: #fefce8;
+}
+.quick-link.yellow:hover {
+  background-color: #fef9c3;
+}
+.icon-box.yellow {
+  background-color: #fef9c3;
+}
+.quick-link.yellow:hover .icon-box.yellow {
+  background-color: #fde68a;
+}
+
+/* Text color */
+.quick-link .text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}

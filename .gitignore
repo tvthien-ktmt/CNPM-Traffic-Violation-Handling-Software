@@ -1,0 +1,20 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# AI models
+*.pt
+*.onnx
+*.h5
+
+# Videos
+*.mp4
+*.webm
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
